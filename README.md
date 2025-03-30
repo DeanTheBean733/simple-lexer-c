@@ -31,22 +31,23 @@ A C compiler (e.g. `gcc`, `clang`) and a standard POSIX environment (or any envi
 
 2. Compile the example using gcc:
 
-```bash
-gcc -o simple_lexer_example example.c simple-lexer.c
-```
+    ```bash
+    gcc -o simple_lexer_example example.c simple-lexer.c
+    ```
 
 3. Run the example:
 
-```bash
-./simple_lexer_example
-```
+    ```bash
+    ./simple_lexer_example
+    ```
 
 4. Integrating Into Your Project
+
 Simply include the header in your source files:
 
-```
-#include "simple-lexer.h"
-```
+    ```
+    #include "simple-lexer.h"
+    ```
 
 Then compile the implementation file (simple-lexer.c) along with your project. Customize token types, comment markers, and other settings as needed.
 
