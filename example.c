@@ -81,7 +81,7 @@ int main(void) {
 
     SimpleLexer_Token token = {0};
     while (simplelexer_get_token(&lexer, &token)) {
-        lexer.diagf(token.loc, "INFO", "%s: %.*s",
+        lexer.diagf(token.loc, "TOKEN", "%s: %.*s",
                     simplelexer_kind_name(SIMPLELEXER_KIND(token.id)),
                     (int)(token.end - token.begin), token.begin);
     }

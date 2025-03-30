@@ -1,4 +1,5 @@
 #define SIMPLELEXER_IMPLEMENTATION
+
 #include <stdarg.h>
 
 #include "simple-lexer.h"
