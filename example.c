@@ -61,7 +61,7 @@ int main(void) {
     const char *file_path = "example.input";
     const char *content =
         "#include <stdio.h>\n"
-        "if (a == 17*2 + 35) { // single line comment\n"
+        "if (a == 180*2 + 50) { // single line comment\n"
         "    /* multi\n"
         "     * line\n"
         "     * comment\n"
@@ -85,8 +85,10 @@ int main(void) {
                     simplelexer_kind_name(SIMPLELEXER_KIND(token.id)),
                     (int)(token.end - token.begin), token.begin);
     }
+
     if (!simplelexer_expect_id(&lexer, token, SIMPLELEXER_END)) {
         return 1;
     }
+    
     return 0;
 }
