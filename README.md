@@ -89,3 +89,8 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 Contributions are welcome! Feel free to fork this repository and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
 
+## Acknowledgements
+
+Special thanks to [this YouTube video](https://www.youtube.com/watch?v=pdsq1YeHLuQ) for helping and inspiring me to reproduce it.
+
+Copyright 2025, Max Base
