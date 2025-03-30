@@ -1,0 +1,8 @@
+#include <stdio.h>
+if (a == 17*2 + 35) { // single line comment
+    /* multi
+     * line
+     * comment
+     */
+    return b;
+}
