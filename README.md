@@ -45,9 +45,9 @@ A C compiler (e.g. `gcc`, `clang`) and a standard POSIX environment (or any envi
 
 Simply include the header in your source files:
 
-    ```c
-    #include "simple-lexer.h"
-    ```
+```c
+#include "simple-lexer.h"
+```
 
 Then compile the implementation file (simple-lexer.c) along with your project. Customize token types, comment markers, and other settings as needed.
 
